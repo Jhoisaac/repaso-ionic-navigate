@@ -6,3 +6,4 @@ export { ListadoPage } from './listado/listado';
 export { TabsPage } from './tabs/tabs';
 export { ProductoPage } from './producto/producto';
 export { AjustesPage } from './ajustes/ajustes';
+export { Ajustes2Page } from './ajustes2/ajustes2';
