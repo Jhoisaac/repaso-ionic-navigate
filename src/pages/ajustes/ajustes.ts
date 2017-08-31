@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, PopoverController } from 'ionic-angular';
+import { ModalPage, PopupPage } from "../index.pages";
 
 /**
  * Generated class for the AjustesPage page.
@@ -15,11 +16,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AjustesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private modalCtrl: ModalController,
+              private popOverCtrl: PopoverController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AjustesPage');
+  }
+
+  irModal() {
+    let modal = this.modalCtrl.create(ModalPage);
+    modal.present();
+
+    modal.onDidDismiss(
+      res => {
+        if (res) {
+          console.log(res);
+        }
+      }
+    );
+  }
+
+  activarRoot() {
+    this.navCtrl.parent.select(1);
+  }
+
+  irPop() {
+    let popup = this.popOverCtrl.create(PopoverController);
+    popup.present();
   }
 
 }

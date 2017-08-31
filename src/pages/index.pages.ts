@@ -6,3 +6,5 @@ export { ListadoPage } from './listado/listado';
 export { TabsPage } from './tabs/tabs';
 export { ProductoPage } from './producto/producto';
 export { AjustesPage } from './ajustes/ajustes';
+export { ModalPage } from './modal/modal';
+export { PopupPage } from './popup/popup';

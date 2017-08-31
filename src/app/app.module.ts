@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { ScannerPage, TabsPage, ListadoPage, AjustesPage, ProductoPage } from '../pages/index.pages';
+import { ScannerPage, TabsPage, ListadoPage, AjustesPage, ProductoPage, ModalPage, PopupPage } from '../pages/index.pages';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { HttpModule } from '@angular/http';
@@ -18,7 +18,9 @@ import { ListadoProvider } from '../providers/listado/listado';
     ListadoPage,
     TabsPage,
     AjustesPage,
-    ProductoPage
+    ProductoPage,
+    ModalPage,
+    PopupPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,9 @@ import { ListadoProvider } from '../providers/listado/listado';
     ListadoPage,
     TabsPage,
     AjustesPage,
-    ProductoPage
+    ProductoPage,
+    ModalPage,
+    PopupPage
   ],
   providers: [
     StatusBar,

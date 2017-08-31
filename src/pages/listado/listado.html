@@ -15,14 +15,14 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let producto of products; let index = i" (click)="mostrarProducto(producto)">
+    <ion-item *ngFor="let producto of productos; let index = i" (click)="mostrarProducto(producto)">
       {{producto.nombre}}
     </ion-item>
   </ion-list>
 
   <h3>Listado Html</h3>
   <ion-list>
-    <ion-item *ngFor="let producto of products; let index=i" [navPush]="productoUrl" [navParams]="{'parametro': producto}">
+    <ion-item *ngFor="let producto of productos; let index=i" [navPush]="productoUrl" [navParams]="{'parametro': producto}">
       <h2>{{producto.nombre}}</h2>
     </ion-item>
   </ion-list>
