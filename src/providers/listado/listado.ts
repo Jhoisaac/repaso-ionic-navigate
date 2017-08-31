@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ListadoProvider {
   // urlProducto: string = 'https://pruebatp2017a-dkuran.c9users.io/producto';
-  urlProducto: string = 'http://localhost:1337/api';
+  urlProducto: string = 'http://35.194.35.240/api';
   products: any = [
     {
       nombre: 'Grapadora',

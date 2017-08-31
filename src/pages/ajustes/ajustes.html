@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>ajustes</ion-title>
   </ion-navbar>
 
@@ -14,5 +14,15 @@
 
 
 <ion-content padding>
+  <button ion-button block color="primary" (click)="irModal()">
+    Ir Modal
+  </button>
 
+  <button ion-button block color="secondary" (click)="activarRoot()">
+    Activar Root
+  </button>
+
+  <button ion-button block color="danger" (click)="irPop()">
+    Ir Popup
+  </button>
 </ion-content>

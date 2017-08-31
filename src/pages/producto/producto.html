@@ -7,12 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>producto</ion-title>
+    <ion-title>producto - {{producto.nombre}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <h3>{{producto.descripcion}}</h3>
 
+  <button ion-button block color="primary" (click)="regresar()">
+    Regresar con Evento
+  </button>
+
+  <button ion-button block color="secondary" navPop>
+    Regresar con Html
+  </button>
+
+  <button ion-button block color="danger" (click)="regresarRoot()">
+    Regresar al Root
+  </button>
 </ion-content>

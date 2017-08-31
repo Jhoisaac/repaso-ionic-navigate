@@ -33,7 +33,6 @@ export class ListadoPage {
       poder: 'Rayo Solar',
     }
   ];
-  producto: string = "product1";
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -47,16 +46,17 @@ export class ListadoPage {
 
   obtenerProductos() {
     console.log('obteniendo productos...');
-    console.log(this.listadoProvider.getProductos());
-    this.listadoProvider.getProductos().subscribe(
-      res => {
-        console.log(res);
+    this.listadoProvider.getProductos()
+      .subscribe(
+      data => {
+        console.log(data);
+        this.productos = data;
       }
     );
   }
 
   mostrarProducto(producto: string) {
     console.log('categoria seleccionada');
-    this.navCtrl.push(ProductoPage, {'parametro': this.producto});
+    this.navCtrl.push(ProductoPage, {'parametro': producto});
   }
 }
